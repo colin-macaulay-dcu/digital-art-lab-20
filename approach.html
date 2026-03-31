@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approach — Digital Art Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&family=Lilita+One&family=Bungee+Shade&family=Permanent+Marker&family=Cabin+Sketch:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dal-style.css">
+<style>
+.page-hero{background:linear-gradient(160deg,#00D68F,#00E89F,#4EEDB8)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:1rem;position:relative}
+.sgrid::before{content:'';position:absolute;top:24px;left:8%;right:8%;height:4px;background:linear-gradient(90deg,var(--coral),var(--green),var(--purple),var(--orange));border-radius:4px;z-index:0}
+.scard{position:relative;z-index:1}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr}.sgrid{grid-template-columns:1fr 1fr}.sgrid::before{display:none}}
+</style></head><body>
+<aside class="sidebar"><div class="sidebar-logo"><span>DIGITAL</span><span>ART</span><span>LAB</span></div>
+<ul class="sidebar-nav"><li><a href="index.html">🏠<span class="tip">Home</span></a></li><li><a href="about.html">💡<span class="tip">About</span></a></li><li><a href="approach.html" class="active">🧪<span class="tip">Approach</span></a></li><li><a href="resources.html">📦<span class="tip">Resources</span></a></li><li><a href="talking-avatar.html">🎤<span class="tip">Lessons</span></a></li><li><a href="research.html">🔬<span class="tip">Research</span></a></li></ul></aside>
+<div class="main">
+<div class="dcu-bar"><span>Dublin City University · Funded PhD Research · Institute of Education</span><a href="https://www.dcu.ie" target="_blank">dcu.ie →</a></div>
+<div class="page-hero"><canvas id="heroBg"></canvas><canvas id="heroAnim" class="anim-canvas"></canvas>
+  <div class="hero-content">
+    <h1>What the DAL — <span class="neon-yellow">Stands For</span></h1>
+    <p class="subtitle">Three beliefs shape everything we make — and four steps take every experiment from the workshop floor to your classroom.</p>
+  </div>
+</div>
+<div class="sec" style="background:linear-gradient(160deg,#F8F6FF,#F0EEFF)"><canvas id="s1Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner">
+    <h2 class="sec-h" style="text-align:center;color:var(--navy)">Our <span class="neon-green">Beliefs</span></h2>
+    <div class="pgrid">
+      <div class="pcard"><div class="pi">🧪</div><h3 class="pt">Experimentation Over Perfection</h3><p class="pb">The best learning happens when teachers feel free to try things without fear of failure. The process of experimenting is itself the point.</p></div>
+      <div class="pcard"><div class="pi">🎓</div><h3 class="pt">Teacher Empowerment</h3><p class="pb">Digital empowerment isn't just about knowing how to use a tool. It's about having the confidence, curiosity, and creative purpose to make your own decisions.</p></div>
+      <div class="pcard"><div class="pi">📚</div><h3 class="pt">Grounded in the Curriculum</h3><p class="pb">Everything in the DAL connects to the new Irish Primary Curriculum — particularly its emphasis on creativity, agency, inclusion, and contemporary competencies.</p></div>
+    </div>
+  </div>
+</div>
+<div class="sec" style="background:var(--white)"><canvas id="s2Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner">
+    <h2 class="sec-h" style="text-align:center;color:var(--navy)">From Workshop <span class="neon-coral">to Your Classroom</span></h2>
+    <p class="sec-body" style="text-align:center;margin:0 auto 2rem">Everything on this platform starts in a real workshop and ends in your hands.</p>
+    <div class="sgrid">
+      <div class="scard"><div class="sn">01</div><h4>We Experiment Together</h4><p>Trainee and qualified teachers come into the DAL — a real creative studio — to try things out with both traditional art materials and digital approaches.</p></div>
+      <div class="scard"><div class="sn">02</div><h4>We Document Everything</h4><p>Photos, videos, teacher reflections — every step captured. Not just the finished work but the thinking, the stumbles, and the unexpected discoveries.</p></div>
+      <div class="scard"><div class="sn">03</div><h4>We Turn It Into Resources</h4><p>Workshop experiments shaped into classroom-ready materials — lesson ideas, tool guides, exemplars, and curriculum links — practical, adaptable, and free.</p></div>
+      <div class="scard"><div class="sn">04</div><h4>You Take It Further</h4><p>You bring resources into your classroom, adapt them for your children, and share what you discover. Your feedback shapes what the DAL develops next.</p></div>
+    </div>
+  </div>
+</div>
+<footer><div class="footer-grid"><div><div class="f-logo"><span class="c1">Digital </span><span class="c2">Art </span><span class="c3">Lab</span></div><p class="f-desc">A creative tech resource platform for Irish primary teachers — where traditional art-making meets digital technology, grounded in the Irish Primary Curriculum.</p></div><div><p class="f-heading">Platform</p><ul class="f-links"><li><a href="resources.html">Resources</a></li><li><a href="talking-avatar.html">Lesson Ideas</a></li><li><a href="about.html">About the DAL</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="research.html">Research</a></li></ul></div><div><p class="f-heading">Project</p><ul class="f-links"><li><a href="research.html">Research Background</a></li><li><a href="#">Teacher Voices</a></li><li><a href="#">Process Videos</a></li><li><a href="#">Give Feedback</a></li><li><a href="#">Contact</a></li></ul></div></div><div class="f-bottom"><p>Digital Art Lab — PhD Research Platform · <a href="https://www.dcu.ie" target="_blank">Dublin City University</a></p><p>Fostering Digital Empowerment in Irish Primary Visual Arts Education</p></div></footer>
+</div>
+<script src="dal-art.js"></script>
+<script>
+function init(){
+  paintSection('heroBg',['#ffffff','#FFE44D','#FF6B6B','#9B59F0','#4FC3F7']);
+  paintSection('s1Bg',['#9B59F015','#FF6B6B12','#FFE44D12','#00D68F12']);
+  paintSection('s2Bg',['#9B59F010','#FF6B6B10','#FFE44D10','#00D68F10']);
+  initAnimatedOverlay('heroAnim');
+}
+window.addEventListener('load',init);window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(init,200);});
+</script></body></html>

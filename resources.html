@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Digital Art Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&family=Lilita+One&family=Bungee+Shade&family=Permanent+Marker&family=Cabin+Sketch:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dal-style.css">
+<style>
+.page-hero{background:linear-gradient(160deg,#FFE44D,#FFF0A0,#FFDA00)}
+.page-hero h1{color:var(--navy)}.page-hero .subtitle{color:rgba(26,26,46,.7)}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:1rem}
+.rcard{background:var(--white);border-radius:22px;overflow:hidden;box-shadow:0 5px 0 rgba(0,0,0,.08),0 10px 25px rgba(0,0,0,.06);transition:all .3s cubic-bezier(.34,1.56,.64,1);cursor:pointer;display:block}
+.rcard:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 12px 0 rgba(0,0,0,.06),0 20px 40px rgba(0,0,0,.1)}
+.rc-top{height:90px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.rc-top .re{transition:transform .3s}
+.rcard:hover .re{transform:scale(1.2) rotate(8deg)}
+.rcard:nth-child(1) .rc-top{background:linear-gradient(135deg,#A06CD5,#C09AEF)}.rcard:nth-child(2) .rc-top{background:linear-gradient(135deg,#4FC3F7,#80D8FF)}.rcard:nth-child(3) .rc-top{background:linear-gradient(135deg,#FF6B6B,#FF8E8E)}.rcard:nth-child(4) .rc-top{background:linear-gradient(135deg,#FFE44D,#FFF0A0)}.rcard:nth-child(5) .rc-top{background:linear-gradient(135deg,#FF9F43,#FFB97A)}.rcard:nth-child(6) .rc-top{background:linear-gradient(135deg,#FF6EB4,#FFB5E8)}.rcard:nth-child(7) .rc-top{background:linear-gradient(135deg,#00D68F,#4EEDB8)}.rcard:nth-child(8) .rc-top{background:linear-gradient(135deg,#1A1A2E,#3A3A5E)}
+.rc-body{padding:1rem 1.2rem 1.3rem}.rc-title{font-family:'Baloo 2',cursive;font-size:.92rem;font-weight:800;color:var(--navy);margin-bottom:.2rem}.rc-desc{font-size:.78rem;line-height:1.5;color:#6B7B9E;font-weight:700}
+.ggrid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1rem}
+.gcell{aspect-ratio:1;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;transition:all .25s;position:relative;overflow:hidden;cursor:default}
+.gcell:hover{transform:scale(1.05)}
+.gcell:nth-child(1){background:linear-gradient(135deg,#FF6B6B22,#FF6B6B44)}.gcell:nth-child(2){background:linear-gradient(135deg,#4FC3F722,#4FC3F744)}.gcell:nth-child(3){background:linear-gradient(135deg,#9B59F022,#9B59F044)}.gcell:nth-child(4){background:linear-gradient(135deg,#FFE44D33,#FFE44D55)}.gcell:nth-child(5){background:linear-gradient(135deg,#FF9F4322,#FF9F4344)}
+.gcell .ge{font-size:2.2rem}.gcell .gl{font-family:'Baloo 2',cursive;font-size:.78rem;font-weight:700;color:var(--navy)}.gc-badge{position:absolute;top:.5rem;right:.5rem;background:var(--coral);color:var(--white);font-size:.55rem;font-weight:900;padding:.15rem .5rem;border-radius:50px}
+@media(max-width:900px){.rgrid{grid-template-columns:1fr 1fr}.ggrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.rgrid{grid-template-columns:1fr}.ggrid{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<aside class="sidebar"><div class="sidebar-logo"><span>DIGITAL</span><span>ART</span><span>LAB</span></div>
+<ul class="sidebar-nav"><li><a href="index.html">🏠<span class="tip">Home</span></a></li><li><a href="about.html">💡<span class="tip">About</span></a></li><li><a href="approach.html">🧪<span class="tip">Approach</span></a></li><li><a href="resources.html" class="active">📦<span class="tip">Resources</span></a></li><li><a href="talking-avatar.html">🎤<span class="tip">Lessons</span></a></li><li><a href="research.html">🔬<span class="tip">Research</span></a></li></ul></aside>
+<div class="main">
+<div class="dcu-bar"><span>Dublin City University · Funded PhD Research · Institute of Education</span><a href="https://www.dcu.ie" target="_blank">dcu.ie →</a></div>
+<div class="page-hero"><canvas id="heroBg"></canvas><canvas id="heroAnim" class="anim-canvas"></canvas>
+  <div class="hero-content"><h1>Explore the — <span style="color:var(--coral);text-shadow:0 0 15px #FF6B6B,0 0 30px #FF6B6B55">Platform</span></h1>
+  <p class="subtitle">Eight sections of classroom-ready resources — from lesson ideas and tool tutorials to CPD material and downloadable packs.</p></div>
+</div>
+<div class="sec" style="background:var(--white)"><canvas id="s1Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner"><h2 class="sec-h" style="text-align:center;color:var(--navy)">All <span class="neon-coral">Resources</span></h2>
+  <div class="rgrid">
+    <a href="talking-avatar.html" class="rcard"><div class="rc-top"><span class="re">💡</span></div><div class="rc-body"><div class="rc-title">Lesson Ideas →</div><div class="rc-desc">Starting points for digital art lessons — adaptable for any primary class level.</div></div></a>
+    <div class="rcard"><div class="rc-top"><span class="re">🛠️</span></div><div class="rc-body"><div class="rc-title">Tool Tutorials</div><div class="rc-desc">Short, accessible guides to digital tools — no specialist knowledge required.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">🖼️</span></div><div class="rc-body"><div class="rc-title">Workshop Exemplars</div><div class="rc-desc">Real examples from DAL workshops — showing process and outcomes at every stage.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">📋</span></div><div class="rc-body"><div class="rc-title">Curriculum Connections</div><div class="rc-desc">Every resource mapped to the Irish Primary Curriculum — strands and class levels.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">🎓</span></div><div class="rc-body"><div class="rc-title">Teacher CPD</div><div class="rc-desc">Professional learning material — building confidence and implementation support.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">🎬</span></div><div class="rc-body"><div class="rc-title">Process Videos</div><div class="rc-desc">Behind-the-scenes footage from the workshop — creativity unfolding in real time.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">📦</span></div><div class="rc-body"><div class="rc-title">Download Packs</div><div class="rc-desc">PDF resources, planning templates, and printable guides for your classroom.</div></div></div>
+    <div class="rcard"><div class="rc-top"><span class="re">🗣️</span></div><div class="rc-body"><div class="rc-title">Teacher Voices</div><div class="rc-desc">Honest reflections — what worked, what surprised them, what they'd do differently.</div></div></div>
+  </div></div>
+</div>
+<div class="sec" style="background:linear-gradient(160deg,#F8F6FF,#F0EEFF)"><canvas id="s2Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner"><h2 class="sec-h" style="text-align:center;color:var(--navy)">Experiments <span class="neon-purple">in Progress</span></h2>
+  <p class="sec-body" style="text-align:center;margin:0 auto 1.5rem">Workshop photos, process videos, and exemplars will appear here as the project develops.</p>
+  <div class="ggrid">
+    <div class="gcell"><span class="gc-badge">Coming Soon</span><span class="ge">🎨</span><span class="gl">Workshop Photography</span></div>
+    <div class="gcell"><span class="ge">🎬</span><span class="gl">Process Video</span></div>
+    <div class="gcell"><span class="ge">🖼️</span><span class="gl">Exemplar Work</span></div>
+    <div class="gcell"><span class="ge">📱</span><span class="gl">Digital Output</span></div>
+    <div class="gcell"><span class="ge">✏️</span><span class="gl">Making Process</span></div>
+  </div></div>
+</div>
+<footer><div class="footer-grid"><div><div class="f-logo"><span class="c1">Digital </span><span class="c2">Art </span><span class="c3">Lab</span></div><p class="f-desc">A creative tech resource platform for Irish primary teachers — where traditional art-making meets digital technology, grounded in the Irish Primary Curriculum.</p></div><div><p class="f-heading">Platform</p><ul class="f-links"><li><a href="resources.html">Resources</a></li><li><a href="talking-avatar.html">Lesson Ideas</a></li><li><a href="about.html">About the DAL</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="research.html">Research</a></li></ul></div><div><p class="f-heading">Project</p><ul class="f-links"><li><a href="research.html">Research Background</a></li><li><a href="#">Teacher Voices</a></li><li><a href="#">Process Videos</a></li><li><a href="#">Give Feedback</a></li><li><a href="#">Contact</a></li></ul></div></div><div class="f-bottom"><p>Digital Art Lab — PhD Research Platform · <a href="https://www.dcu.ie" target="_blank">Dublin City University</a></p><p>Fostering Digital Empowerment in Irish Primary Visual Arts Education</p></div></footer>
+</div>
+<script src="dal-art.js"></script>
+<script>
+function init(){
+  paintSection('heroBg',['#FF6B6B','#9B59F0','#00D68F','#1A1A2E','#4FC3F7']);
+  paintSection('s1Bg',['#9B59F010','#FF6B6B10','#FFE44D10','#00D68F10']);
+  paintSection('s2Bg',['#9B59F012','#FF6B6B12','#FFE44D12','#00D68F12']);
+  initAnimatedOverlay('heroAnim');
+}
+window.addEventListener('load',init);window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(init,200);});
+</script></body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Digital Art Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&family=Lilita+One&family=Bungee+Shade&family=Permanent+Marker&family=Cabin+Sketch:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dal-style.css">
+<style>
+.page-hero{background:linear-gradient(160deg,#FF6B6B,#FF8E8E,#FFB5A0)}
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start}
+.about-story p{font-size:1rem;line-height:1.85;color:#6B7B9E;margin-bottom:1.2rem;font-weight:700}
+.about-story strong{color:var(--navy);font-weight:800}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+</style></head><body>
+<aside class="sidebar"><div class="sidebar-logo"><span>DIGITAL</span><span>ART</span><span>LAB</span></div>
+<ul class="sidebar-nav"><li><a href="index.html">🏠<span class="tip">Home</span></a></li><li><a href="about.html" class="active">💡<span class="tip">About</span></a></li><li><a href="approach.html">🧪<span class="tip">Approach</span></a></li><li><a href="resources.html">📦<span class="tip">Resources</span></a></li><li><a href="talking-avatar.html">🎤<span class="tip">Lessons</span></a></li><li><a href="research.html">🔬<span class="tip">Research</span></a></li></ul></aside>
+<div class="main">
+<div class="dcu-bar"><span>Dublin City University · Funded PhD Research · Institute of Education</span><a href="https://www.dcu.ie" target="_blank">dcu.ie →</a></div>
+<div class="page-hero"><canvas id="heroBg"></canvas><canvas id="heroAnim" class="anim-canvas"></canvas>
+  <div class="hero-content">
+    <h1>A Lab for — <span class="neon-yellow">Creative Bravery</span></h1>
+    <p class="subtitle">The Digital Art Lab is a resource and inspiration platform for Irish primary teachers — where traditional art-making and digital technology come together.</p>
+  </div>
+</div>
+<div class="sec" style="background:var(--white)"><canvas id="sec1Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner"><div class="about-grid">
+    <div class="about-story">
+      <h2 style="font-family:'Bungee Shade',cursive;font-size:1.6rem;color:var(--navy);margin-bottom:1.2rem">The <span class="neon-coral">Digital Art Lab</span></h2>
+      <p>Digital technology is always at the centre of the DAL. Sometimes you'll start with paint or clay and bring ideas into a digital tool. Sometimes it's purely digital. What matters is the <strong>spirit of experimentation</strong> — the willingness to try something, see what happens, and try again.</p>
+      <p>Everything here comes from real workshops with trainee and qualified teachers — experimenting together, taking chances, making mistakes, and discovering what genuinely works in a primary classroom.</p>
+      <p>The DAL is not a finished product. It is a <strong>living, growing platform</strong> — shaped by teacher feedback, workshop experiments, and the ongoing PhD research it is built on.</p>
+      <div class="tag-cloud"><span class="tag">Be Brave</span><span class="tag">Experiment</span><span class="tag">Try &amp; Try Again</span><span class="tag">No Wrong Answers</span><span class="tag">Process Over Product</span><span class="tag">Follow Your Curiosity</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:.7rem">
+      <div class="fcard"><span class="fi">💻</span><div><div class="ft">Digital First</div><div class="fb">Apps, drawing tools, animation, photography, video — digital technology is always at the heart of the DAL. Every resource embeds a digital element.</div></div></div>
+      <div class="fcard"><span class="fi">🖌️</span><div><div class="ft">Starting Physical, Going Digital</div><div class="fb">Sometimes the best starting point is a brush, a print, or collage — but the journey always leads into digital territory.</div></div></div>
+      <div class="fcard"><span class="fi">🔀</span><div><div class="ft">Hybrid Practice</div><div class="fb">Traditional and digital processes woven together — responding to each other, creating something richer than either could produce alone.</div></div></div>
+      <div class="fcard"><span class="fi">🎯</span><div><div class="ft">Always Curriculum-Linked</div><div class="fb">All DAL resources connect to the Irish Primary Curriculum — Visual Arts strands, competencies, and class levels clearly signposted throughout.</div></div></div>
+    </div>
+  </div></div>
+</div>
+<footer><div class="footer-grid"><div><div class="f-logo"><span class="c1">Digital </span><span class="c2">Art </span><span class="c3">Lab</span></div><p class="f-desc">A creative tech resource platform for Irish primary teachers — where traditional art-making meets digital technology, grounded in the Irish Primary Curriculum.</p></div><div><p class="f-heading">Platform</p><ul class="f-links"><li><a href="resources.html">Resources</a></li><li><a href="talking-avatar.html">Lesson Ideas</a></li><li><a href="about.html">About the DAL</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="research.html">Research</a></li></ul></div><div><p class="f-heading">Project</p><ul class="f-links"><li><a href="research.html">Research Background</a></li><li><a href="#">Teacher Voices</a></li><li><a href="#">Process Videos</a></li><li><a href="#">Give Feedback</a></li><li><a href="#">Contact</a></li></ul></div></div><div class="f-bottom"><p>Digital Art Lab — PhD Research Platform · <a href="https://www.dcu.ie" target="_blank">Dublin City University</a></p><p>Fostering Digital Empowerment in Irish Primary Visual Arts Education</p></div></footer>
+</div>
+<script src="dal-art.js"></script>
+<script>
+function init(){
+  paintSection('heroBg',['#ffffff','#FFE44D','#00D68F','#9B59F0','#4FC3F7']);
+  paintSection('sec1Bg',['#FF6B6B15','#FFE44D15','#9B59F015','#00D68F15']);
+  initAnimatedOverlay('heroAnim');
+}
+window.addEventListener('load',init);
+window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(init,200);});
+</script></body></html>

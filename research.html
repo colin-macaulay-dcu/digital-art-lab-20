@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Digital Art Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&family=Lilita+One&family=Bungee+Shade&family=Permanent+Marker&family=Cabin+Sketch:wght@700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dal-style.css">
+<style>
+.page-hero{background:linear-gradient(160deg,#FF9F43,#FFB97A,#FFD4A0)}
+.rgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:start}
+.rgrid p{font-size:1rem;line-height:1.85;color:#6B7B9E;margin-bottom:1rem;font-weight:700}
+.rgrid strong{color:var(--navy);font-weight:800}
+.dbr-visual{display:flex;align-items:center;justify-content:center}
+.dbr-cycle{position:relative;width:300px;height:300px}
+.dbr-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--coral));display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--white);text-align:center;box-shadow:0 0 30px rgba(255,107,107,.3);z-index:2}
+.dbr-center span{font-family:'Permanent Marker',cursive;font-size:.7rem;line-height:1.3}
+.dbr-node{position:absolute;width:80px;height:80px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;box-shadow:0 4px 15px rgba(0,0,0,.1);z-index:2;cursor:default;transition:all .3s}
+.dbr-node:hover{transform:scale(1.15)}
+.dbr-node .di{font-size:1.3rem}.dbr-node .dl{font-family:'Permanent Marker',cursive;font-size:.6rem}
+.dn1{top:-5px;left:50%;transform:translateX(-50%);background:var(--coral);color:var(--white)}
+.dn2{right:-5px;top:50%;transform:translateY(-50%);background:var(--blue);color:var(--white)}
+.dn3{bottom:-5px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--navy)}
+.dn4{left:-5px;top:50%;transform:translateY(-50%);background:var(--purple);color:var(--white)}
+.dbr-ring{position:absolute;inset:20px;border-radius:50%;border:4px dashed rgba(44,62,107,.12);animation:spinSlow 20s linear infinite}
+@keyframes spinSlow{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.dcu-block{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.dcu-block h2{font-family:'Bungee Shade',cursive;font-size:1.5rem;color:var(--navy);margin-bottom:1rem}
+.dcu-block h2 span{color:var(--orange);text-shadow:0 0 10px #FF9F4355}
+.dcu-block p{font-size:1rem;line-height:1.8;color:#6B7B9E;font-weight:700;margin-bottom:.8rem}
+.dcu-facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.df{background:var(--white);border-radius:18px;padding:1.5rem;text-align:center;box-shadow:0 4px 15px rgba(44,62,107,.06);transition:all .25s}
+.df:hover{transform:translateY(-4px)}
+.df-n{font-family:'Bungee Shade',cursive;font-size:1.6rem;color:var(--orange);text-shadow:0 0 8px #FF9F4333;margin-bottom:.3rem}
+.df-l{font-size:.8rem;color:#6B7B9E;font-weight:700;line-height:1.4}
+@media(max-width:900px){.rgrid,.dcu-block{grid-template-columns:1fr}.dcu-facts{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<aside class="sidebar"><div class="sidebar-logo"><span>DIGITAL</span><span>ART</span><span>LAB</span></div>
+<ul class="sidebar-nav"><li><a href="index.html">🏠<span class="tip">Home</span></a></li><li><a href="about.html">💡<span class="tip">About</span></a></li><li><a href="approach.html">🧪<span class="tip">Approach</span></a></li><li><a href="resources.html">📦<span class="tip">Resources</span></a></li><li><a href="talking-avatar.html">🎤<span class="tip">Lessons</span></a></li><li><a href="research.html" class="active">🔬<span class="tip">Research</span></a></li></ul></aside>
+<div class="main">
+<div class="dcu-bar"><span>Dublin City University · Funded PhD Research · Institute of Education</span><a href="https://www.dcu.ie" target="_blank">dcu.ie →</a></div>
+<div class="page-hero"><canvas id="heroBg"></canvas><canvas id="heroAnim" class="anim-canvas"></canvas>
+  <div class="hero-content"><h1>Grounded in — <span class="neon-yellow">Design-Based Research</span></h1>
+  <p class="subtitle">The DAL is the central output of a PhD study at DCU: Fostering Digital Empowerment — An Online Multi-Media Art Resource for Irish Primary School Teachers.</p></div>
+</div>
+<div class="sec" style="background:var(--white)"><canvas id="s1Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner"><div class="rgrid">
+    <div>
+      <h2 class="sec-h" style="color:var(--navy)">Design-Based <span class="neon-coral">Research</span></h2>
+      <p>The platform is built iteratively — through <strong>real cycles of design, workshop implementation, reflection, and refinement</strong>. It is both a research intervention and a practical tool for teachers.</p>
+      <p>The research sits within the context of the new Irish Primary Curriculum — particularly its emphasis on creativity, agency, inclusion, and the development of contemporary competencies in Visual Arts education.</p>
+      <p>Unlike traditional research that tests a finished product, DBR <strong>develops the intervention and the knowledge simultaneously</strong> — meaning the DAL platform is shaped by what teachers say, do, and discover in real workshops throughout the research process.</p>
+      <a href="mailto:" class="btn btn-coral" style="margin-top:.5rem">Get in Touch →</a>
+    </div>
+    <div class="dbr-visual"><div class="dbr-cycle"><div class="dbr-ring"></div>
+      <div class="dbr-center"><span>Design-Based<br>Research<br>Cycle</span></div>
+      <div class="dbr-node dn1"><span class="di">✏️</span><span class="dl">Design</span></div>
+      <div class="dbr-node dn2"><span class="di">🚀</span><span class="dl">Implement</span></div>
+      <div class="dbr-node dn3"><span class="di">🔍</span><span class="dl">Reflect</span></div>
+      <div class="dbr-node dn4"><span class="di">🔄</span><span class="dl">Refine</span></div>
+    </div></div>
+  </div></div>
+</div>
+<div class="sec" style="background:linear-gradient(160deg,#F8F6FF,#F0EEFF)"><canvas id="s2Bg" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+  <div class="inner"><div class="dcu-block">
+    <div><h2>PhD Research at <span>Dublin City University</span></h2>
+      <p>The Digital Art Lab is the central output of a funded PhD study at DCU's Institute of Education — one of Ireland's leading centres for educational research and teacher education.</p>
+      <p>The research reflects DCU's commitment to purposeful, innovative, and socially engaged scholarship in teaching and learning.</p>
+      <a href="https://www.dcu.ie" target="_blank" style="color:var(--coral);font-weight:800;font-size:.95rem">Visit dcu.ie →</a></div>
+    <div class="dcu-facts">
+      <div class="df"><div class="df-n">DCU</div><div class="df-l">Dublin City University — Purposefully Different</div></div>
+      <div class="df"><div class="df-n">IoE</div><div class="df-l">Institute of Education — Ireland's largest teacher education provider</div></div>
+      <div class="df"><div class="df-n">DBR</div><div class="df-l">Design-Based Research — theory and practice in dialogue</div></div>
+      <div class="df"><div class="df-n">IPC</div><div class="df-l">Aligned with the new Irish Primary Curriculum</div></div>
+    </div>
+  </div></div>
+</div>
+<footer><div class="footer-grid"><div><div class="f-logo"><span class="c1">Digital </span><span class="c2">Art </span><span class="c3">Lab</span></div><p class="f-desc">A creative tech resource platform for Irish primary teachers — where traditional art-making meets digital technology, grounded in the Irish Primary Curriculum.</p></div><div><p class="f-heading">Platform</p><ul class="f-links"><li><a href="resources.html">Resources</a></li><li><a href="talking-avatar.html">Lesson Ideas</a></li><li><a href="about.html">About the DAL</a></li><li><a href="approach.html">Our Approach</a></li><li><a href="research.html">Research</a></li></ul></div><div><p class="f-heading">Project</p><ul class="f-links"><li><a href="research.html">Research Background</a></li><li><a href="#">Teacher Voices</a></li><li><a href="#">Process Videos</a></li><li><a href="#">Give Feedback</a></li><li><a href="#">Contact</a></li></ul></div></div><div class="f-bottom"><p>Digital Art Lab — PhD Research Platform · <a href="https://www.dcu.ie" target="_blank">Dublin City University</a></p><p>Fostering Digital Empowerment in Irish Primary Visual Arts Education</p></div></footer>
+</div>
+<script src="dal-art.js"></script>
+<script>
+function init(){
+  paintSection('heroBg',['#ffffff','#FFE44D','#FF6B6B','#9B59F0','#1A1A2E']);
+  paintSection('s1Bg',['#FF9F4310','#FF6B6B10','#FFE44D10','#9B59F010']);
+  paintSection('s2Bg',['#9B59F010','#FF6B6B10','#FFE44D10','#00D68F10']);
+  initAnimatedOverlay('heroAnim');
+}
+window.addEventListener('load',init);window.addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(init,200);});
+</script></body></html>
